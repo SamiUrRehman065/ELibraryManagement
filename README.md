@@ -135,14 +135,14 @@ Karachi, Pakistan
 
 
 
-## 📄 `Detail OverView Of Each Module `
+# 📄 `Detail OverView Of Each Module `
 ---
-# 🛡️ Admin Login Module
-```
-## 📌 Overview
+## 🛡️ Admin Login Module
+
+# 📌 Overview
 This module provides secure access for administrators to manage the library system. It validates credentials against the database and redirects to the admin dashboard upon success.
 
-## 🧠 Backend Logic
+# 🧠 Backend Logic
 - **Page:** `adminlogin.aspx.cs`
 - **Authentication Flow:**
   - Captures `username` and `password` from form.
@@ -150,7 +150,7 @@ This module provides secure access for administrators to manage the library syst
   - If credentials match, sets `Session["username"]` and redirects.
   - Else, shows error message.
 
-## 🎨 Frontend Features
+# 🎨 Frontend Features
 - **Form Fields:**
   - Username (TextBox)
   - Password (TextBox with `TextMode="Password"`)
@@ -160,24 +160,24 @@ This module provides secure access for administrators to manage the library syst
   - Required field validators
   - Bootstrap styling for form layout
 
-## 🔐 Security & Validation
+# 🔐 Security & Validation
 - Passwords are matched directly (no hashing — consider adding).
 - SQL query uses parameterized command to prevent injection.
 - Session variable used for access control.
 
-## 🗃️ Database Tables Used
+# 🗃️ Database Tables Used
 - `admin_login_tbl`
   - `username` (PK)
   - `password`
 
-## 🌟 Suggested Enhancements
+# 🌟 Suggested Enhancements
 - Implement password hashing (e.g., SHA256).
 - Add login attempt throttling or CAPTCHA.
 - Redirect to HTTPS-only version.
 
-## ✅ Status
+# ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
