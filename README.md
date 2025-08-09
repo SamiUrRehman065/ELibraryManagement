@@ -17,7 +17,7 @@
 ---
 
 
-## 📁 Folder Structure 
+### 📁 Folder Structure 
 
 ```plaintext
 ElibraryManagement/
@@ -139,10 +139,10 @@ Karachi, Pakistan
 ---
 ## 🛡️ Admin Login Module
 
-# 📌 Overview
+### 📌 Overview
 This module provides secure access for administrators to manage the library system. It validates credentials against the database and redirects to the admin dashboard upon success.
 
-# 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Page:** `adminlogin.aspx.cs`
 - **Authentication Flow:**
   - Captures `username` and `password` from form.
@@ -150,7 +150,7 @@ This module provides secure access for administrators to manage the library syst
   - If credentials match, sets `Session["username"]` and redirects.
   - Else, shows error message.
 
-# 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Form Fields:**
   - Username (TextBox)
   - Password (TextBox with `TextMode="Password"`)
@@ -160,42 +160,42 @@ This module provides secure access for administrators to manage the library syst
   - Required field validators
   - Bootstrap styling for form layout
 
-# 🔐 Security & Validation
+### 🔐 Security & Validation
 - Passwords are matched directly (no hashing — consider adding).
 - SQL query uses parameterized command to prevent injection.
 - Session variable used for access control.
 
-# 🗃️ Database Tables Used
+### 🗃️ Database Tables Used
 - `admin_login_tbl`
   - `username` (PK)
   - `password`
 
-# 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Implement password hashing (e.g., SHA256).
 - Add login attempt throttling or CAPTCHA.
 - Redirect to HTTPS-only version.
 
-# ✅ Status
+### ✅ Status
 `✅ Complete`
 
 
 ---
 
 
-# ✍️ Author Management Module
-```
-## 📌 Overview
+## ✍️ Author Management Module
+
+### 📌 Overview
 This module allows admins to add, update, delete, and view authors in the system. It ensures that author records are properly maintained and searchable.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Page:** `authormanagement.aspx.cs`
 - **Core Functions:**
-  - `AddAuthor()`: Inserts new author into `author_tbl`.
+- `AddAuthor()`: Inserts new author into `author_tbl`.
   - `UpdateAuthor()`: Updates existing author details.
   - `DeleteAuthor()`: Removes author by ID.
   - `GetAuthors()`: Binds all authors to GridView.
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Form Fields:**
   - Author ID (TextBox)
   - Author Name (TextBox)
@@ -207,35 +207,35 @@ This module allows admins to add, update, delete, and view authors in the system
   - Bootstrap cards and buttons
   - FontAwesome icons for actions
 
-## 🔐 Security & Validation
+### 🔐 Security & Validation
 - Author ID is validated for uniqueness.
 - SQL commands use parameters to prevent injection.
 - GridView supports paging and sorting.
 
-## 🗃️ Database Tables Used
+### 🗃️ Database Tables Used
 - `author_tbl`
   - `author_id` (PK)
   - `author_name`
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add confirmation modal before deletion.
 - Implement search-as-you-type for author name.
 - Add audit trail for changes.
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 
 ---
 
 
-# 📚 Book Inventory Module
-```
-## 📌 Overview
+## 📚 Book Inventory Module
+
+### 📌 Overview
 This module enables admins to manage the library's book collection. It supports adding new books, updating details, deleting entries, and viewing the full inventory.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Page:** `bookinventory.aspx.cs`
 - **Core Functions:**
   - `AddBook()`: Inserts book into `book_tbl`.
@@ -244,7 +244,7 @@ This module enables admins to manage the library's book collection. It supports 
   - `GetBooks()`: Binds all books to GridView.
   - `CheckIfBookExists()`: Prevents duplicate entries.
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Form Fields:**
   - Book ID, Name, Genre, Author, Publisher, Language, Edition, Cost, Pages, Description
   - Dropdowns for genre, author, publisher
@@ -256,24 +256,24 @@ This module enables admins to manage the library's book collection. It supports 
   - Responsive layout with Bootstrap
   - FontAwesome icons for actions
 
-## 🔐 Security & Validation
+### 🔐 Security & Validation
 - SQL commands use parameters to prevent injection.
 - Validates required fields and numeric inputs.
 - Prevents duplicate Book IDs.
 
-## 🗃️ Database Tables Used
+### 🗃️ Database Tables Used
 - `book_tbl`
   - `book_id` (PK)
   - `book_name`, `genre`, `author_id`, `publisher_id`, `language`, `edition`, `cost`, `pages`, `description`, `actual_stock`, `current_stock`
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add image upload for book covers.
 - Implement genre filtering and sorting.
 - Add stock alerts for low inventory.
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 
 
@@ -281,12 +281,12 @@ This module enables admins to manage the library's book collection. It supports 
 
 
 
-# 📦 Book Issuing Module
-```
-## 📌 Overview
+## 📦 Book Issuing Module
+
+### 📌 Overview
 This module allows admins to issue books to registered members. It tracks issued books, due dates, and ensures stock levels are updated accordingly.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Page:** `bookissuing.aspx.cs`
 - **Core Functions:**
   - `IssueBook()`: Inserts record into `book_issue_tbl`, decrements `current_stock`.
@@ -295,7 +295,7 @@ This module allows admins to issue books to registered members. It tracks issued
   - `CheckIfMemberExists()`: Ensures member is registered.
   - `GetIssuedBooks()`: Displays all issued books.
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Form Fields:**
   - Member ID, Book ID
   - Issue Date, Due Date (Calendar controls)
@@ -307,12 +307,12 @@ This module allows admins to issue books to registered members. It tracks issued
   - Bootstrap layout with badges for status
   - FontAwesome icons for actions
 
-## 🔐 Security & Validation
+### 🔐 Security & Validation
 - Prevents issuing if `current_stock <= 0`.
 - Validates member and book existence.
 - Uses parameterized SQL commands.
 
-## 🗃️ Database Tables Used
+### 🗃️ Database Tables Used
 - `book_issue_tbl`
   - `member_id`, `book_id`, `issue_date`, `due_date`, `return_date`, `is_returned`
 - `book_tbl`
@@ -320,14 +320,14 @@ This module allows admins to issue books to registered members. It tracks issued
 - `member_tbl`
   - `member_id`
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add email reminders for due dates.
 - Implement fine calculation for late returns.
 - Add filter for overdue books.
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 
 
@@ -335,12 +335,12 @@ This module allows admins to issue books to registered members. It tracks issued
 
 
 
-# 🏠 Homepage Module
-```
-## 📌 Overview
+## 🏠 Homepage Module
+
+### 📌 Overview
 The homepage serves as the entry point for users, guests, and admins. It provides navigation to login, signup, and public book browsing.
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Navigation Links:**
   - User Login
   - Admin Login
@@ -352,18 +352,18 @@ The homepage serves as the entry point for users, guests, and admins. It provide
 - **MasterPage Integration:**
   - Uses `Main.Master` for consistent layout
 
-## 🔐 Access Control
+### 🔐 Access Control
 - Publicly accessible
 - Navigation links dynamically shown based on session role
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add welcome message or carousel
 - Highlight featured books or announcements
 - Add testimonials or library stats
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 
 
@@ -371,12 +371,12 @@ The homepage serves as the entry point for users, guests, and admins. It provide
 
 
 
-# 🧩 Main.Master Module
-```
-## 📌 Overview
+## 🧩 Main.Master Module
+
+### 📌 Overview
 `Main.Master` is the master page that provides a consistent layout across all pages. It includes the header, footer, and navigation bar.
 
-## 🧱 Structural Elements
+### 🧱 Structural Elements
 - **Header:**
   - Site title and logo
 - **Navigation Bar:**
@@ -386,40 +386,40 @@ The homepage serves as the entry point for users, guests, and admins. It provide
   - Copyright
   - Contact info or social links
 
-## 🎨 Styling
+### 🎨 Styling
 - Bootstrap grid and navbar
 - FontAwesome icons
 - Custom CSS for branding
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Navigation links change based on session role:
   - Admin sees admin dashboard link
   - User sees profile and logout
   - Guest sees login/signup
 
-## 🔧 Integration
+### 🔧 Integration
 - Used by all content pages (e.g., Homepage, BookView, Login)
 - Ensures uniform look and feel
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add dark mode toggle
 - Include search bar in navbar
 - Add dropdowns for role-specific actions
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
 
-# 🙋‍♂️ User Login Module
-```
-## 📌 Overview
+## 🙋‍♂️ User Login Module
+
+### 📌 Overview
 Enables registered users to log into the system and access personalized features like borrowing books and viewing profiles.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Authentication:**
   - Checks credentials against `UserTable`
   - Uses parameterized SQL queries for security
@@ -428,7 +428,7 @@ Enables registered users to log into the system and access personalized features
   - Redirects to `UserDashboard.aspx`
   - On failure: shows error message
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Form Fields:**
   - Username
   - Password
@@ -437,32 +437,31 @@ Enables registered users to log into the system and access personalized features
   - FontAwesome user icon
   - Error message display
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - SQL injection prevention
 - Optional: password hashing and CAPTCHA
 
-## 🔄 Navigation
+### 🔄 Navigation
 - Link to signup page
 - Link back to homepage
 - Option to switch to admin login
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add “Remember Me” checkbox
 - Implement two-factor authentication
 - Show login history or last login time
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
 
 ---
 
-# 📝 User Signup Module
-```
-## 📌 Overview
+## 📝 User Signup Module
+
+### 📌 Overview
 Allows new users to register and create an account to access library services.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Registration:**
   - Inserts user data into `UserTable`
   - Checks for duplicate usernames or emails
@@ -470,7 +469,7 @@ Allows new users to register and create an account to access library services.
   - Server-side checks for required fields and valid formats
   - Uses parameterized queries to prevent SQL injection
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Form Fields:**
   - Full Name
   - Email
@@ -482,34 +481,34 @@ Allows new users to register and create an account to access library services.
   - FontAwesome icons for each field
   - Real-time validation feedback
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Password strength enforcement
 - SQL injection protection
 - Optional: CAPTCHA and email verification
 
-## 🔄 Navigation
+### 🔄 Navigation
 - Link to login page
 - Link back to homepage
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add password strength meter
 - Send welcome email on signup
 - Allow profile picture upload
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
 
-# 🧭 Admin Dashboard Module
-```
-## 📌 Overview
+## 🧭 Admin Dashboard Module
+
+### 📌 Overview
 Central hub for administrators to manage books, users, authors, and categories.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Role Verification:**
   - Only accessible if `Session["role"] == "admin"`
 - **Navigation:**
@@ -520,7 +519,7 @@ Central hub for administrators to manage books, users, authors, and categories.
     - Issued Books
     - Member Management
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Dashboard Cards:**
   - Quick links with icons and descriptions
 - **UI Elements:**
@@ -528,41 +527,41 @@ Central hub for administrators to manage books, users, authors, and categories.
   - FontAwesome icons for each module
   - Responsive design
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Displays admin name from session
 - Shows real-time counts (e.g., total books, members) if implemented
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Redirects unauthorized users to login
 - Session timeout handling recommended
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add analytics charts (e.g., book issue trends)
 - Include recent activity logs
 - Add quick search bar for admin modules
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
 
 
-# 🧑‍💼 User Dashboard Module
-```
-## 📌 Overview
+## 🧑‍💼 User Dashboard Module
+
+### 📌 Overview
 Provides logged-in users with access to personal features like viewing borrowed books, updating profiles, and browsing the catalog.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Role Verification:**
   - Accessible only if `Session["role"] == "user"`
 - **Session Usage:**
   - Displays username from `Session["username"]`
   - Loads user-specific data (e.g., borrowed books)
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Dashboard Cards:**
   - View Profile
   - Borrowed Books
@@ -572,32 +571,32 @@ Provides logged-in users with access to personal features like viewing borrowed 
   - FontAwesome icons
   - Personalized greeting
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Displays user-specific stats (e.g., books borrowed)
 - Links adapt based on user activity
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Redirects unauthorized access to login
 - Optional: session timeout and logout confirmation
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add book recommendations
 - Show due dates and return reminders
 - Include reading history
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
-# ✍️ Author Management Module
-```
-## 📌 Overview
+## ✍️ Author Management Module
+
+### 📌 Overview
 Allows admins to add, update, delete, and view authors in the system.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **CRUD Operations:**
   - Create: Add new author to `AuthorTable`
   - Read: Display all authors in GridView
@@ -607,7 +606,7 @@ Allows admins to add, update, delete, and view authors in the system.
   - Uses `SqlDataSource` for data binding
   - Parameterized queries for security
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **GridView:**
   - Displays author list with edit/delete options
 - **Form Inputs:**
@@ -617,33 +616,32 @@ Allows admins to add, update, delete, and view authors in the system.
   - Bootstrap styling
   - FontAwesome icons for actions
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Inline editing in GridView
 - Confirmation prompts for delete
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Role check: only accessible to admins
 - SQL injection prevention
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add search/filter functionality
 - Show number of books per author
 - Export author list to CSV
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
-# 🏢 Publisher Management Module
+## 🏢 Publisher Management Module
 
-```
-## 📌 Overview
+### 📌 Overview
 Enables administrators to manage publisher records—add, edit, delete, and view publishers.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **CRUD Operations:**
   - Create: Insert new publisher into `PublisherTable`
   - Read: Display all publishers via GridView
@@ -653,7 +651,7 @@ Enables administrators to manage publisher records—add, edit, delete, and view
   - Uses `SqlDataSource` for seamless data binding
   - Parameterized queries for safety
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **GridView:**
   - Lists publishers with edit/delete buttons
 - **Form Inputs:**
@@ -663,32 +661,32 @@ Enables administrators to manage publisher records—add, edit, delete, and view
   - Bootstrap layout
   - FontAwesome icons for clarity
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Real-time updates in GridView
 - Delete confirmation prompts
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Admin-only access
 - SQL injection protection
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add publisher logo upload
 - Show number of books per publisher
 - Enable sorting and filtering
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
-# 📚 Book Inventory Module
-```
-## 📌 Overview
+## 📚 Book Inventory Module
+
+### 📌 Overview
 Allows administrators to manage the library’s book collection—add, update, delete, and view book records.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **CRUD Operations:**
   - Create: Add new book to `BookTable`
   - Read: Display books with full details
@@ -698,7 +696,7 @@ Allows administrators to manage the library’s book collection—add, update, d
   - Uses `SqlDataSource` for GridView binding
   - Parameterized queries for security
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Form Inputs:**
   - Title, Author, Publisher, Genre, Language
   - ISBN, Edition, Stock Count, Description
@@ -708,34 +706,33 @@ Allows administrators to manage the library’s book collection—add, update, d
   - Bootstrap styling
   - FontAwesome icons for actions
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Inline editing
 - Dropdowns populated from `AuthorTable` and `PublisherTable`
 - Real-time stock updates
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Admin-only access
 - SQL injection prevention
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add book cover image upload
 - Enable bulk import via CSV
 - Add barcode generation for inventory
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
 
 ---
 
 
 
-# 📦 Book Issuing Module
-```
-## 📌 Overview
+## 📦 Book Issuing Module
+
+### 📌 Overview
 Allows administrators to issue books to registered users and track due dates.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Issuing Process:**
   - Select user and book
   - Set issue and return dates
@@ -745,7 +742,7 @@ Allows administrators to issue books to registered users and track due dates.
   - Checks if book is in stock
   - Prevents duplicate issuance
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Form Inputs:**
   - Username
   - Book ID or Title (dropdown)
@@ -756,34 +753,34 @@ Allows administrators to issue books to registered users and track due dates.
   - FontAwesome icons
   - Success/error messages
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Auto-fill book details on selection
 - Real-time stock check
 - Displays current issued books in GridView
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Admin-only access
 - SQL injection protection
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add email reminders for due dates
 - Show user’s borrowing history
 - Enable renewal and return actions
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
 
-# 🔄 Book Returning Module
-```
-## 📌 Overview
+## 🔄 Book Returning Module
+
+### 📌 Overview
 Allows administrators to process book returns, update inventory, and clear user records.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Return Process:**
   - Select issued book record
   - Update `IssuedBooksTable` status to "Returned"
@@ -792,7 +789,7 @@ Allows administrators to process book returns, update inventory, and clear user 
   - Ensures book was issued
   - Prevents duplicate returns
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **GridView:**
   - Displays all issued books with return option
 - **UI Elements:**
@@ -800,34 +797,33 @@ Allows administrators to process book returns, update inventory, and clear user 
   - FontAwesome return icon
   - Confirmation prompts
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Updates stock in real time
 - Marks return date and status
 - Optionally calculates late fees
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Admin-only access
 - SQL injection protection
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add return receipt generation
 - Show overdue status and fine calculation
 - Enable batch returns
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
 
 ---
 
 
 
-# 🧑‍🤝‍🧑 Member Management Module
-```
-## 📌 Overview
+## 🧑‍🤝‍🧑 Member Management Module
+
+### 📌 Overview
 Allows administrators to view, update, and delete registered user accounts.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **CRUD Operations:**
   - Read: Display all users from `UserTable`
   - Update: Edit user details inline
@@ -836,7 +832,7 @@ Allows administrators to view, update, and delete registered user accounts.
   - Uses `SqlDataSource` for GridView binding
   - Parameterized queries for security
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **GridView:**
   - Shows user details (name, email, contact)
   - Edit and delete buttons
@@ -845,34 +841,34 @@ Allows administrators to view, update, and delete registered user accounts.
   - FontAwesome icons
   - Confirmation prompts
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Inline editing
 - Real-time updates
 - Displays total member count
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Admin-only access
 - SQL injection protection
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add user status (active/inactive)
 - Enable search and filter
 - Export member list to CSV
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
 
-# 👀 Book View Module
-```
-## 📌 Overview
+## 👀 Book View Module
+
+### 📌 Overview
 Public-facing page that allows users and guests to browse available books in the library.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Data Retrieval:**
   - Fetches book records from `BookTable`
   - Displays only books with stock > 0
@@ -880,7 +876,7 @@ Public-facing page that allows users and guests to browse available books in the
   - Uses `SqlDataSource` for GridView binding
   - Read-only access
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **GridView:**
   - Shows book title, author, genre, language, availability
 - **UI Elements:**
@@ -888,39 +884,39 @@ Public-facing page that allows users and guests to browse available books in the
   - FontAwesome icons
   - Responsive layout for mobile users
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Filters out unavailable books
 - Optionally allows sorting by title, author, genre
 
-## 🔐 Access Control
+### 🔐 Access Control
 - Publicly accessible
 - No login required
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add search and filter options
 - Show book cover thumbnails
 - Enable “Add to Wishlist” for logged-in users
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
-# 🙍‍♂️ Profile Management Module
-```
-## 📌 Overview
+## 🙍‍♂️ Profile Management Module
+
+### 📌 Overview
 Allows logged-in users to view and update their personal information.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Data Retrieval:**
   - Loads user data from `UserTable` using `Session["username"]`
 - **Update Logic:**
   - Allows editing of name, email, contact, password
   - Uses parameterized SQL queries for updates
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Form Inputs:**
   - Full Name
   - Email
@@ -931,34 +927,33 @@ Allows logged-in users to view and update their personal information.
   - FontAwesome icons
   - Success/error messages
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Pre-fills form with current user data
 - Displays update confirmation
 - Optionally shows last profile update timestamp
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Accessible only to logged-in users
 - SQL injection protection
 - Optional: password strength validation
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add profile picture upload
 - Enable email verification on change
 - Show borrowing history in profile
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
 
 ---
 
 
-# ⚠️ Error Handling Module
-```
-## 📌 Overview
+## ⚠️ Error Handling Module
+
+### 📌 Overview
 Ensures graceful handling of unexpected errors across the application, improving user experience and system reliability.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Try-Catch Blocks:**
   - Used in all critical operations (login, CRUD, issuing/returning)
   - Catches exceptions and logs them if logging is implemented
@@ -966,39 +961,39 @@ Ensures graceful handling of unexpected errors across the application, improving
   - Displays friendly error messages
   - Avoids exposing technical details
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - **Error Labels:**
   - Bootstrap alert boxes for warnings and errors
   - FontAwesome icons for visual cues
 - **Fallback Navigation:**
   - Redirects to homepage or dashboard on failure
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Shows context-specific messages (e.g., “Invalid credentials”, “Book not found”)
 - Optional: logs errors to `ErrorLogTable` or text file
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Prevents leakage of stack traces or SQL errors
 - Sanitizes all user inputs
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Implement global error handler in `Global.asax`
 - Add error logging with timestamps and user context
 - Notify admin on critical failures
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
-# 🧠 Session Management Module
-```
-## 📌 Overview
+## 🧠 Session Management Module
+
+### 📌 Overview
 Handles user session tracking, role-based access control, and secure navigation across the application.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Session Variables:**
   - `Session["role"]`: Determines access level (admin/user)
   - `Session["username"]`: Identifies logged-in user
@@ -1006,59 +1001,57 @@ Handles user session tracking, role-based access control, and secure navigation 
   - Pages check session role before loading
   - Unauthorized access redirects to login
 
-## 🔄 Dynamic Behavior
+### 🔄 Dynamic Behavior
 - Navigation links adapt based on session
 - Personalized greetings and dashboards
 - Session timeout handling (optional)
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Prevents role spoofing
 - Clears session on logout
 - Optional: session expiration and renewal
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - Role-based visibility of UI elements
 - Logout button with confirmation
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add session timeout warnings
 - Implement sliding expiration
 - Log session start/end times for audit
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
+
 
 ---
 
 
 
-# 🚪 Logout Module
-```
-## 📌 Overview
+## 🚪 Logout Module
+
+### 📌 Overview
 Safely terminates user or admin sessions and redirects to the homepage.
 
-## 🧠 Backend Logic
+### 🧠 Backend Logic
 - **Session Termination:**
   - `Session.Abandon()` clears all session variables
   - Optional: `Response.Cache.SetNoStore()` to prevent back navigation
 - **Redirection:**
   - Redirects to `homepage.aspx` after logout
 
-## 🔐 Security Measures
+### 🔐 Security Measures
 - Ensures no residual session data
 - Prevents unauthorized access via browser history
 
-## 🎨 Frontend Features
+### 🎨 Frontend Features
 - Logout confirmation message (optional)
 - Clean redirect with Bootstrap alert or toast
 
-## 🌟 Suggested Enhancements
+### 🌟 Suggested Enhancements
 - Add logout confirmation modal
 - Log logout time for audit
 - Redirect to role-specific goodbye page
 
-## ✅ Status
+### ✅ Status
 `✅ Complete`
-```
-
