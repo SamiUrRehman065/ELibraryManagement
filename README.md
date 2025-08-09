@@ -75,7 +75,7 @@ ElibraryManagement/
 
 ### 🧩 Module Breakdown
 
-Each module is documented in its own `.md` file inside the `docs/` folder. Highlights include:
+Each module is documented in its own , Highlights include:
 
 | Module               | Purpose                             | Status     |
 |----------------------|--------------------------------------|------------|
@@ -135,17 +135,10 @@ Karachi, Pakistan
 
 
 
-
-
 ## 📄 `Detail OverView Of Each Module `
-
-```
-
-## 📄 `adminlogin `
-
-```
+---
 # 🛡️ Admin Login Module
-
+```
 ## 📌 Overview
 This module provides secure access for administrators to manage the library system. It validates credentials against the database and redirects to the admin dashboard upon success.
 
@@ -188,11 +181,9 @@ This module provides secure access for administrators to manage the library syst
 
 ---
 
-## 📄 `authormanagement `
 
-```
 # ✍️ Author Management Module
-
+```
 ## 📌 Overview
 This module allows admins to add, update, delete, and view authors in the system. It ensures that author records are properly maintained and searchable.
 
@@ -238,11 +229,9 @@ This module allows admins to add, update, delete, and view authors in the system
 
 ---
 
-## 📄 `bookinventory `
 
-```
 # 📚 Book Inventory Module
-
+```
 ## 📌 Overview
 This module enables admins to manage the library's book collection. It supports adding new books, updating details, deleting entries, and viewing the full inventory.
 
@@ -290,11 +279,10 @@ This module enables admins to manage the library's book collection. It supports 
 
 ---
 
-## 📄 `bookissuing `
 
-```
+
 # 📦 Book Issuing Module
-
+```
 ## 📌 Overview
 This module allows admins to issue books to registered members. It tracks issued books, due dates, and ensures stock levels are updated accordingly.
 
@@ -345,11 +333,10 @@ This module allows admins to issue books to registered members. It tracks issued
 
 ---
 
-## 📄 `homepage `
 
-```
+
 # 🏠 Homepage Module
-
+```
 ## 📌 Overview
 The homepage serves as the entry point for users, guests, and admins. It provides navigation to login, signup, and public book browsing.
 
@@ -382,11 +369,10 @@ The homepage serves as the entry point for users, guests, and admins. It provide
 
 ---
 
-## 📄 `main_master `
 
-```
+
 # 🧩 Main.Master Module
-
+```
 ## 📌 Overview
 `Main.Master` is the master page that provides a consistent layout across all pages. It includes the header, footer, and navigation bar.
 
@@ -426,11 +412,10 @@ The homepage serves as the entry point for users, guests, and admins. It provide
 
 ---
 
-## 📄 `user_login `
 
-```
+
 # 🙋‍♂️ User Login Module
-
+```
 ## 📌 Overview
 Enables registered users to log into the system and access personalized features like borrowing books and viewing profiles.
 
@@ -470,15 +455,10 @@ Enables registered users to log into the system and access personalized features
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `user_signup `
-
-```
 # 📝 User Signup Module
-
+```
 ## 📌 Overview
 Allows new users to register and create an account to access library services.
 
@@ -520,15 +500,12 @@ Allows new users to register and create an account to access library services.
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `admin_dashboard `
 
-```
+
 # 🧭 Admin Dashboard Module
-
+```
 ## 📌 Overview
 Central hub for administrators to manage books, users, authors, and categories.
 
@@ -568,15 +545,13 @@ Central hub for administrators to manage books, users, authors, and categories.
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `user_dashboard `
 
-```
+
+
 # 🧑‍💼 User Dashboard Module
-
+```
 ## 📌 Overview
 Provides logged-in users with access to personal features like viewing borrowed books, updating profiles, and browsing the catalog.
 
@@ -614,15 +589,11 @@ Provides logged-in users with access to personal features like viewing borrowed 
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `author_management `
 
-```
 # ✍️ Author Management Module
-
+```
 ## 📌 Overview
 Allows admins to add, update, delete, and view authors in the system.
 
@@ -663,15 +634,12 @@ Allows admins to add, update, delete, and view authors in the system.
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `publisher_management `
 
-```
 # 🏢 Publisher Management Module
 
+```
 ## 📌 Overview
 Enables administrators to manage publisher records—add, edit, delete, and view publishers.
 
@@ -712,15 +680,11 @@ Enables administrators to manage publisher records—add, edit, delete, and view
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `book_inventory `
 
-```
 # 📚 Book Inventory Module
-
+```
 ## 📌 Overview
 Allows administrators to manage the library’s book collection—add, update, delete, and view book records.
 
@@ -762,15 +726,12 @@ Allows administrators to manage the library’s book collection—add, update, d
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `book_issuing `
 
-```
+
 # 📦 Book Issuing Module
-
+```
 ## 📌 Overview
 Allows administrators to issue books to registered users and track due dates.
 
@@ -813,15 +774,12 @@ Allows administrators to issue books to registered users and track due dates.
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `book_returning `
 
-```
+
 # 🔄 Book Returning Module
-
+```
 ## 📌 Overview
 Allows administrators to process book returns, update inventory, and clear user records.
 
@@ -860,15 +818,12 @@ Allows administrators to process book returns, update inventory, and clear user 
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `member_management `
 
-```
+
 # 🧑‍🤝‍🧑 Member Management Module
-
+```
 ## 📌 Overview
 Allows administrators to view, update, and delete registered user accounts.
 
@@ -908,15 +863,12 @@ Allows administrators to view, update, and delete registered user accounts.
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `book_view `
 
-```
+
 # 👀 Book View Module
-
+```
 ## 📌 Overview
 Public-facing page that allows users and guests to browse available books in the library.
 
@@ -953,15 +905,11 @@ Public-facing page that allows users and guests to browse available books in the
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `profile_management `
 
-```
 # 🙍‍♂️ Profile Management Module
-
+```
 ## 📌 Overview
 Allows logged-in users to view and update their personal information.
 
@@ -1002,15 +950,11 @@ Allows logged-in users to view and update their personal information.
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `error_handling `
 
-```
 # ⚠️ Error Handling Module
-
+```
 ## 📌 Overview
 Ensures graceful handling of unexpected errors across the application, improving user experience and system reliability.
 
@@ -1046,15 +990,11 @@ Ensures graceful handling of unexpected errors across the application, improving
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `session_management `
 
-```
 # 🧠 Session Management Module
-
+```
 ## 📌 Overview
 Handles user session tracking, role-based access control, and secure navigation across the application.
 
@@ -1089,15 +1029,12 @@ Handles user session tracking, role-based access control, and secure navigation 
 `✅ Complete`
 ```
 
-
-
 ---
 
-## 📄 `logout `
 
-```
+
 # 🚪 Logout Module
-
+```
 ## 📌 Overview
 Safely terminates user or admin sessions and redirects to the homepage.
 
@@ -1125,4 +1062,3 @@ Safely terminates user or admin sessions and redirects to the homepage.
 `✅ Complete`
 ```
 
-```
